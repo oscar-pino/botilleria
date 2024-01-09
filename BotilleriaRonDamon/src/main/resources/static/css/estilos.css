@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+h3{
+	
+	color:red;
+}
+
+.error{
+	color:red;
+	font-size:110%;
+	font-weight:italic;
+}
+
+.fono{
+	font-size:140%;
+	color:springgreen;;
+}
+
+.entradas{
+	
+	font-family:cursive;
+	color:blue;
+	font-size:120%;
+}
+
+.desplegable{		
+	
+	width:100%;
+	padding:1.2% 0;
+	font-size:120%;
+	border:.3px solid black;
+}
+
+#btnRegistrarProducto, #btnVaciar, #btnVolver{
+	
+	font-size:120%;
+	width:30%;
+	padding-top:1.2%;
+	padding-bottom:1.2%;
+	border-radius:10%;
+	color:white;
+}
+
+#btnModificar, #btnEliminar{
+	
+	
+	
+	padding:.7% 2.5%;	
+	border-radius:10%;
+	color:white;
+}
+
+#btnRegistrarProducto, #btnModificar{
+	
+	background:springgreen;
+}
+
+#btnEliminar{
+	
+	background:red;
+}
+
+#btnVaciar{
+	
+	background:LightSteelBlue;
+}
+
+#btnVolver{
+	
+	background:skyblue;
+}
+
+
+#pagerror{
+	
+	margin-left:20%;
+	padding-bottom:10%;
+	
+}
+
+#frmLogin{
+	
+	margin:0 auto;
+}
+
+ #logo{
+ width:50%;
+ height:50%;
+ }
+ 
+ #productos{
+ position:absolute;
+ top:12;
+ background:yellow;
+ }
+
