@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Image {
+public class MyImage {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -38,7 +38,7 @@ public class Image {
 
 	@Override
 	public String toString() {
-		return "Image [idImage=" + idImage + ", rout=" + rout + ", nombre=" + name + "]";
+		return "MyImage [idImage=" + idImage + ", rout=" + rout + ", nombre=" + name + "]";
 	}
 
 	

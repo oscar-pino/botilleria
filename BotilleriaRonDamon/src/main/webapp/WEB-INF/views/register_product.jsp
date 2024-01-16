@@ -4,7 +4,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>registrar</title>
 <meta charset="utf-8">
@@ -28,8 +28,6 @@
 			</li>
 			<li class="nav-item"><a class="nav-link menu" href="/contact">Contacto</a>
 			</li>
-			<li class="nav-item"><a class="nav-link menu" href="logout">Salir</a>
-			</li>
 		</ul>
 	</nav>
 	<div class="container w-50 my-5">	
@@ -41,7 +39,7 @@
 <form:form action="/products/create" method="post" modelAttribute="prod" cssClass="entradas">
 				
 		<div class="form-group">
-					<form:label path="name">nombre</form:label>
+					<form:label path="name">Nombre</form:label>
 					<form:input path="name" cssClass="form-control entradas"
 						placeholder="ingrese nombre" id="txtNombre" />
 					<form:errors path="name" cssClass="error"></form:errors>					
@@ -63,15 +61,8 @@
 					<form:input path="price" placeholder="ingrese precio"
 						cssClass="form-control entradas" id="numPrecio" />
 					<form:errors path="price" cssClass="error"></form:errors>
-				</div>
-				<div class="form-group">
-					<form:label path="admissionDate">Fecha de ingreso</form:label>
-					<form:input type="date" path="admissionDate"
-						placeholder="ingrese fecha de ingreso"
-						cssClass="form-control entradas" id="datFechaIngreso" />
-					<form:errors path="admissionDate" cssClass="error"></form:errors>
-				</div>
-				<form:label path="image">Imagen</form:label>
+				</div>				
+				<form:label path="image">Bebida a Ingresar</form:label>
 				<div class="input-group mb-3">
 					<form:select path="image" cssClass="desplegable inline w-75 h-25"
 						id="selProducto">
@@ -89,7 +80,7 @@
 	<footer>
 		<div class="container-fluid bg-dark py-3 my-3">
 			<p class="text-white text-center">
-				CopyRight Derechos Reservados, Chile 2020 - <a href="/contact"
+				CopyRight Derechos Reservados, Chile 2024 - <a href="/contact"
 					class="fono">contacto</a>
 			</p>
 		</div>

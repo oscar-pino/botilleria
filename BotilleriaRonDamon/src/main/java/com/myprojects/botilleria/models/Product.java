@@ -12,9 +12,7 @@ import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
-
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
@@ -27,42 +25,44 @@ public class Product {
 	
 	@Column(nullable=false, length=20)
 	@Size(min = 3,max = 20,message = " *debe ingresar nombre de producto")
+	@NotNull(message = "debe ingresar un nombre de producto" )
 	private String name;
 	
 	@Column(nullable=false, length=20)
 	@Size(min = 3,max = 20,message = " *debe ingresar marca de producto")
+	@NotNull(message = "debe ingresar una marca" )
 	private String brand;
 	
 	@Min(value = 0, message = " *debe ingresar solo valores positivos")
+	@NotNull(message = "debe ingresar un valor positivo" )
 	private int stock;
 	
-	@Min(value = 1000, message = " *el valor minimo del producto es 1000")
+	@Min(value = 1000, message = " *el valor minimo para el producto es 1000")
+	@NotNull(message = "debe ingresar un valor positivo" )
 	private int price;
 	
-	@NotNull()
 	@Temporal(TemporalType.DATE)
-	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	//@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@DateTimeFormat(pattern = "dd-MM-yyyy")
 	@Column(nullable = false)
-	@Past(message = " *la fecha debe ser anterior, a la fecha actual")
 	private Date admissionDate;	
 	
 	@ManyToOne
-	@NotNull()
-	private Image image;
+	@NotNull
+	private MyImage myImage;
 	
-	public Product() {
+	public Product() {		
 		
-		this.admissionDate=new Date();
 	}	
 	
-	public Product(String name, String brand, int stock, int price, Date admissionDate, Image image) {
+	public Product(String name, String brand, int stock, int price, Date admissionDate, MyImage myImage) {
 		
 		this.name = name;
 		this.brand = brand;
 		this.stock = stock;
 		this.price = price;
 		this.admissionDate = admissionDate;
-		this.image = image;
+		this.myImage = myImage;
 	}
 
 	public Long getIdProduct() {
@@ -101,16 +101,16 @@ public class Product {
 	public void setAdmissionDate(Date admissionDate) {
 		this.admissionDate = admissionDate;
 	}
-	public Image getImage() {
-		return image;
+	public MyImage getImage() {
+		return myImage;
 	}
-	public void setImage(Image image) {
-		this.image = image;
+	public void setImage(MyImage myImage) {
+		this.myImage = myImage;
 	}
 
 	@Override
 	public String toString() {
 		return "Product [idProducto=" + idProduct + ", nombre=" + name + ", marca=" + brand + ", stock=" + stock
-				+ ", precio=" + price + ", fechaIngreso=" + admissionDate + ", imagen=" + image + "]";
+				+ ", precio=" + price + ", fechaIngreso=" + admissionDate + ", imagen=" + myImage + "]";
 	}	
 }

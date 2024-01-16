@@ -1,5 +1,4 @@
 
-
 let combo;
 let ruta;
 let imagen;
@@ -64,13 +63,13 @@ let principal = () => {
 		idVarios.push(this.value);
 	});
 	$(oculto).val(idVarios);
-	
+		
 	mostrar;
 }
 
 let volviendo = () => {
 	
-	window.location.href = '/index';
+	window.location.href = '/products/read_all';
 }
 
 let modificando = () => {
@@ -150,11 +149,6 @@ let checkeados = () => {
 
 	let temp;
 
-
-	//console.log(seleccionados.length+' seleccionados, de un total de: '+controlesCheckbox.length
-	//+' id seleccionado --> '+getId(this));
-
-
 	if (temporal == total | temporal > 0 & temporal <= total) {
 
 		modificar.attr('disabled', false);
@@ -164,10 +158,6 @@ let checkeados = () => {
 			$(checkboxPrincipal).prop('checked', true);
 		else
 			$(checkboxPrincipal).prop('checked', false);
-
-		//idVarios+=$(seleccionados).prop('id')+',';
-		//temp = $('.items:checked').prop('id');
-		//$(oculto).val(temp);
 
 	}
 	else {
@@ -208,7 +198,7 @@ let estadoBotones = () => {
 
 let vaciando = () => {
 	
-	$('#imgProducto').prop('src', '/img/tragos.png');
+	$(imagen).prop('src', '/img/tragos.png');
 }
 
 $(document).ready(principal);

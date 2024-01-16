@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>index</title>
 <meta charset="utf-8">
@@ -24,8 +24,6 @@
 			</li>
 			<li class="nav-item"><a class="nav-link menu" href="/contact">Contacto</a>
 			</li>
-			<li class="nav-item"><a class="nav-link menu" href="logout">Salir</a>
-			</li>
 		</ul>
 	</nav>
 	<div class="container">
@@ -40,7 +38,7 @@
 	<footer>
 		<div class="container-fluid bg-dark py-3 my-3">
 			<p class="text-white text-center">
-				CopyRight Derechos Reservados, Chile 2020 - <a href="/contact"
+				CopyRight Derechos Reservados, Chile 2024 - <a href="/contact"
 					class="fono">contacto</a>
 			</p>
 		</div>

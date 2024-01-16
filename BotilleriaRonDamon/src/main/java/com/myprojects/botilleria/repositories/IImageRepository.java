@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import com.myprojects.botilleria.models.Image;
+import com.myprojects.botilleria.models.MyImage;
 
-public interface IImageRepository extends JpaRepository<Image,Long>{
+public interface IImageRepository extends JpaRepository<MyImage,Long>{
 
-	Image findByIdImage(Long id);
-	List<Image> findAll();
+	MyImage findByIdImage(Long id);
+	List<MyImage> findAll();
 }
 

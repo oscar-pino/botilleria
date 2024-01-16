@@ -5,43 +5,43 @@ import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.myprojects.botilleria.models.Image;
+import com.myprojects.botilleria.models.MyImage;
 import com.myprojects.botilleria.repositories.IImageRepository;
 
 @Service
-public class ImageServiceImp implements IOperations<Image> {
+public class ImageServiceImp implements IOperations<MyImage> {
 
 	@Autowired
 	private IImageRepository ir;
 
 	@Override
-	public void create(Image image) {
+	public void create(MyImage myImage) {
 
-		ir.save(image);
+		ir.save(myImage);
 	}
 
 	@Override
-	public Image readById(Long id) {
+	public MyImage readById(Long id) {
 
 		return ir.findByIdImage(id);
 	}
 
 	@Override
-	public List<Image> readAll() {
+	public List<MyImage> readAll() {
 
 		return ir.findAll();
 	}
 
 	@Override
-	public void update(Image image) {
+	public void update(MyImage myImage) {
 
-		ir.save(image);
+		ir.save(myImage);
 	}
 
 	@Override
-	public void delete(Image image) {
+	public void delete(MyImage myImage) {
 
-		ir.delete(image);
+		ir.delete(myImage);
 
 	}
 
@@ -53,30 +53,30 @@ public class ImageServiceImp implements IOperations<Image> {
 
 	public void uploadImages() {
 
-		Image image = null;
+		MyImage myImage = null;
 		String imagePath = "src/main/resources/static/img/";
 		File f = new File(imagePath);
 
 		for (String name : f.list()) {
-			image = new Image();
-			image.setRout(imagePath);
-			image.setName(name);
+			myImage = new MyImage();
+			myImage.setRout(imagePath);
+			myImage.setName(name);
 
-			ir.save(image);
+			ir.save(myImage);
 		}
 	}
 	
-	public ArrayList<Image> getImagesOfDrinks() {
+	public ArrayList<MyImage> getImagesOfDrinks() {
 
-		ArrayList<Image> images = new ArrayList<Image>();
+		ArrayList<MyImage> myImages = new ArrayList<MyImage>();
 
-		for (Image img : ir.findAll()) {
+		for (MyImage img : ir.findAll()) {
 
 			if (!img.getName().equals("banner.png") & !img.getName().equals("error.png")
 					& !img.getName().equals("logo.png"))
-				images.add(img);
+				myImages.add(img);
 		}
 
-		return images;
+		return myImages;
 	}
 }

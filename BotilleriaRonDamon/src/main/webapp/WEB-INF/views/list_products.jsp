@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>listar</title>
 <meta charset="utf-8">
@@ -27,8 +27,6 @@
 			</li>
 			<li class="nav-item"><a class="nav-link menu" href="/contact">Contacto</a>
 			</li>
-			<li class="nav-item"><a class="nav-link menu" href="logout">Salir</a>
-			</li>
 			<c:if test="${size == 0}">
 				<li class="nav-item automaticos"><a
 					class="nav-link menu text-primary automaticos" id="automatico"
@@ -46,12 +44,13 @@
 				<thead class="thead-dark">
 					<tr>
 						<th>ID</th>
-						<th>nombre</th>
-						<th>marca</th>
-						<th>stock</th>
-						<th>precio</th>
+						<th>Nombre</th>
+						<th>Marca</th>
+						<th>Stock</th>
+						<th>Precio</th>
+						<th>Ingreso</th>
 						<th>imagen</th>
-						<th><input type="checkbox" id="todos" class="mr-2">todos</input></th>
+						<th><input type="checkbox" id="todos" class="mr-2">Todos</input></th>
 					</tr>
 				</thead>
 				<tbody>
@@ -61,7 +60,8 @@
 							<td>${p.name}</td>
 							<td>${p.brand}</td>
 							<td>${p.stock}</td>
-							<td>${p.price}</td>
+							<td>${p.price}</td>							
+							<td>${p.admissionDate}</td>
 							<td class="bebidas"><img height="35" width="35"
 								alt="imagen de bebida"
 								src="/img/${p.image.name}"></img></td>
@@ -86,7 +86,7 @@
 	<footer>
 		<div class="container-fluid bg-dark py-3 my-3">
 			<p class="text-white text-center">
-				CopyRight Derechos Reservados, Chile 2020 - <a href="/contact"
+				CopyRight Derechos Reservados, Chile 2024 - <a href="/contact"
 					class="fono">contacto</a>
 			</p>
 		</div>

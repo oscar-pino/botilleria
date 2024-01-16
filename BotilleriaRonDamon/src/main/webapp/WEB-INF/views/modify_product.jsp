@@ -3,7 +3,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="c"%>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <title>modificar</title>
 <meta charset="utf-8">
@@ -26,9 +26,7 @@
 			<li class="nav-item"><a class="nav-link menu"
 				href="/products/read_all">Listar</a></li>
 			<li class="nav-item"><a class="nav-link menu" href="/contact">Contacto</a>
-			</li>
-			<li class="nav-item"><a class="nav-link menu" href="logout">Salir</a>
-			</li>
+			</li>			
 		</ul>
 	</nav>
 	<div class="container w-50 my-5">
@@ -65,15 +63,6 @@
 						cssClass="form-control entradas" id="rnumPrecio"
 						value="${pro.price}" />
 				</div>
-
-				<div class="form-group">
-					<form:label path="admissionDate">Fecha de ingreso</form:label>
-					<form:errors path="admissionDate" cssClass="error"></form:errors>
-					<form:input type="date" path="admissionDate"
-						placeholder="ingrese fecha de ingreso"
-						cssClass="form-control entradas" id="rdatFechaIngreso"
-						value="${pro.admissionDate}" />
-				</div>
 				<form:label path="image">Imagen</form:label>
 				<form:errors path="image" cssClass="error"></form:errors>
 				<div class="input-group mb-3">
@@ -92,7 +81,7 @@
 	<footer>
 		<div class="container-fluid bg-dark py-3 my-3">
 			<p class="text-white text-center">
-				CopyRight Derechos Reservados, Chile 2020 - <a href="/contact"
+				CopyRight Derechos Reservados, Chile 2024 - <a href="/contact"
 					class="fono">contacto</a>
 			</p>
 		</div>
