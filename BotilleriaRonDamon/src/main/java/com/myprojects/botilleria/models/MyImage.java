@@ -12,8 +12,12 @@ public class MyImage {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long idImage;	
 	
+	@NotNull
+	@NotBlank
 	private String rout; 
 	
+	@NotNull
+	@NotBlank
 	private String name;	
 	
 	public Long getIdImage() {
